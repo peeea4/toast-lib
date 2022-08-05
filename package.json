@@ -1,21 +1,38 @@
 {
-    "name": "toast-lib",
+    "name": "peeea4-toast-lib",
     "version": "1.0.0",
-    "description": "",
+    "description": "react-toast-library by Nikita Gabetc",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "build": "rollup -c",
+        "cypress": "cypress open"
+    },
+    "eslintConfig": {
+        "extends": [
+            "airbnb-base",
+            "plugin:cypress/recommended"
+        ],
+        "parserOptions": {
+            "ecmaVersion": 8,
+            "sourceType": "module"
+        }
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@babel/core": "^7.18.9",
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.10",
+        "@babel/eslint-parser": "^7.18.9",
+        "@babel/preset-env": "^7.18.10",
         "@babel/preset-react": "^7.18.6",
         "@rollup/plugin-alias": "^3.1.9",
         "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-commonjs": "^22.0.1",
+        "@rollup/plugin-eslint": "^8.0.2",
         "@rollup/plugin-node-resolve": "^13.3.0",
         "@storybook/addon-actions": "^6.5.9",
         "@storybook/addon-essentials": "^6.5.9",
@@ -25,14 +42,31 @@
         "@storybook/manager-webpack4": "^6.5.9",
         "@storybook/react": "^6.5.9",
         "@storybook/testing-library": "^0.0.13",
-        "babel-loader": "^8.2.5",
+        "babel-cli": "^6.26.0",
         "babel-plugin-styled-components": "^2.0.7",
+        "babel-preset-solid": "^1.4.8",
+        "cypress": "^10.3.1",
+        "eslint": "^8.21.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.30.1",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "prettier": "^2.7.1",
+        "prop-types": "^15.8.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "rollup": "^2.77.0",
+        "rollup": "^2.77.2",
         "rollup-plugin-alias": "^2.2.0",
+        "rollup-plugin-eslint": "^7.0.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-terser": "^7.0.2",
+        "styled-components": "^5.3.5"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "styled-components": "^5.3.5"
     }
 }

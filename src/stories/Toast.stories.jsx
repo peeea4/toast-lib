@@ -1,26 +1,28 @@
 import React from "react";
-import { Toast } from "../components/Toast";
+
+import { Toast } from "@/components/Toast";
 
 export default {
     title: "Toast",
     component: Toast,
     argTypes: {
-        positionTop: { control: "number" },
-        positionBottom: { control: "number" },
-        positionRight: { control: "number" },
-        positionLeft: { control: "number" },
         type: {
             control: {
                 type: "select",
             },
             options: ["info", "success", "warning", "error"],
         },
-        marginTopBottom: { control: "number" },
-        marginLeftRight: { control: "number" },
-        paddingTopBottom: { control: "number" },
-        paddingLeftRight: { control: "number" },
+        margin: {
+            control: "text",
+        },
         backgroundColor: {
             control: "color",
+        },
+        title: {
+            control: "text",
+        },
+        description: {
+            control: "text",
         },
     },
 };
@@ -30,26 +32,31 @@ const Template = (args) => <Toast {...args} />;
 export const Info = Template.bind({});
 
 Info.args = {
-    children: "Toast",
     type: "info",
+    title: "Info",
+    description: "Info description",
+    margin: "5px 5px",
 };
 
 export const Success = Template.bind({});
 
 Success.args = {
-    children: "Toast",
     type: "success",
+    title: "Success",
+    description: "Success description",
 };
 
 export const Warning = Template.bind({});
 
 Warning.args = {
-    children: "Toast",
     type: "warning",
+    title: "Warning",
+    description: "Warning description",
 };
-export const Danger = Template.bind({});
+export const Error = Template.bind({});
 
-Danger.args = {
-    children: "Toast",
-    type: "danger",
+Error.args = {
+    type: "error",
+    title: "Error",
+    description: "Error description",
 };

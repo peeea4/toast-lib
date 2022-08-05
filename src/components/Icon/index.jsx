@@ -1,15 +1,19 @@
-import * as info from "../../stories/assets/info.png";
-import * as error from "../../stories/assets/danger.png";
-import * as warning from "../../stories/assets/warning.png";
+import PropTypes from "prop-types";
 
-export const Icon = ({ name }) => {
-    if (name === "warning") {
-        return <img src={warning} />;
-    } else if (name === "danger") {
-        return <img src={error} />;
-    } else if (name === "success") {
-        return <img src={error} />;
-    } else {
-        return <img src={info} />;
-    }
+import * as error from "@/assets/error.png";
+import * as info from "@/assets/info.png";
+import * as success from "@/assets/success.png";
+import * as warning from "@/assets/warning.png";
+
+const icons = {
+    error,
+    info,
+    success,
+    warning,
+};
+
+export const Icon = ({ name }) => <img src={icons[name]} />;
+
+Icon.propTypes = {
+    name: PropTypes.string,
 };
