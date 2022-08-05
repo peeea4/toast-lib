@@ -1,8 +1,9 @@
 {
-    "name": "peeea4-toast-lib",
+    "name": "@peeea4/toast-lib",
     "version": "1.0.0",
     "description": "react-toast-library by Nikita Gabetc",
     "main": "index.js",
+    "repository": "peeea4/toast-lib",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "storybook": "start-storybook -p 6006",
@@ -19,6 +20,9 @@
             "ecmaVersion": 8,
             "sourceType": "module"
         }
+    },
+    "publishConfig": {
+        "@peeea4:registry": "https://npm.pkg.github.com"
     },
     "keywords": [],
     "author": "",
