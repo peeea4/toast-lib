@@ -33,7 +33,6 @@ export const Toast = ({
         handleRemove(id);
     };
     let xTouch = 0;
-
     const handleTouchStart = (e) => {
         xTouch = e.touches[0].clientX;
     };

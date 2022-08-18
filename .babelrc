@@ -1,0 +1,25 @@
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "targets": {
+                    "node": "12"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "alias": {
+                    "@/components": "/components",
+                    "@/hooks": "/hooks",
+                    "@/assets": "/assets"
+                }
+            }
+        ]
+    ]
+}

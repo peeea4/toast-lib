@@ -1,9 +1,10 @@
 import React from "react";
 
 import { ToastProvider } from "@/components/ToastProvider";
-import { COLOR } from "@/constants/style";
 import { ToastContainer } from "@/containers/ToastContainer";
 import { useToast } from "@/hooks/useToast";
+
+import { Button } from "./styled";
 
 export default {
     title: "Toast Container",
@@ -23,39 +24,31 @@ export default {
             },
             options: ["swipe", "flip"],
         },
+        toasts: {
+            table: {
+                disable: true,
+            },
+        },
+        removeToast: {
+            table: {
+                disable: true,
+            },
+        },
     },
 };
 
 const ToastList = ({ position, animation }) => {
     const showToastHandler = () => {
-        const { toast } = useToast();
-        toast({
-            type: "success",
-            title: "Success operation",
-            description: "Description",
-            duration: 5000,
-        });
+        const { success } = useToast();
+        success("Success");
     };
 
     return (
         <>
             <ToastProvider position={position} animation={animation} />
-            <button
-                id="show-btn"
-                onClick={showToastHandler}
-                style={{
-                    width: "200px",
-                    padding: "10px 14px",
-                    fontSize: "17px",
-                    color: "white",
-                    backgroundColor: COLOR.info,
-                    border: "0",
-                    borderRadius: "10px",
-                    cursor: "pointer",
-                }}
-            >
+            <Button id="show-btn" onClick={showToastHandler}>
                 Show Toast
-            </button>
+            </Button>
         </>
     );
 };

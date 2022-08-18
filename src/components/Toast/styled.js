@@ -12,7 +12,7 @@ const progressBarDuration = keyframes`
   }
 `;
 
-const swipeStart = keyframes`
+const swipeStartRight = keyframes`
   from {
     transform: translateX(110%);
   }
@@ -22,13 +22,33 @@ const swipeStart = keyframes`
   }
 `;
 
-const swipeEnd = keyframes`
+const swipeEndRight = keyframes`
   from {
     transform: translateX(0);
   }
 
   to {
     transform: translateX(110%);
+  }
+`;
+
+const swipeStartLeft = keyframes`
+  from {
+    transform: translateX(-110%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const swipeEndLeft = keyframes`
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-110%);
   }
 `;
 
@@ -68,16 +88,34 @@ export const ToastWrapper = styled.div`
     overflow: hidden;
 
     animation: ${(props) =>
+        props.position?.split("").slice(-2).join("") === "ft"
+            ? props.animation === "swipe"
+                ? props.isStart
+                    ? swipeStartLeft
+                    : swipeEndLeft
+                : props.isStart
+                    ? flipStart
+                    : flipEnd
+            : props.animation === "swipe"
+                ? props.isStart
+                    ? swipeStartRight
+                    : swipeEndRight
+                : props.isStart
+                    ? flipStart
+                    : flipEnd}
+        150ms linear;
+`;
+/*
+
         props.animation === "swipe"
             ? props.isStart
                 ? swipeStart
                 : swipeEnd
             : props.isStart
                 ? flipStart
-                : flipEnd}
-        150ms linear;
-`;
+                : flipEnd
 
+*/
 export const Header = styled.h1`
     margin: 0;
     padding: 0;
