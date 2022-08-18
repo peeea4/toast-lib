@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { ErrorBoundary } from "@/components/ErrorBoundary";
-import { Toast } from "@/components/Toast";
+import { ErrorBoundary } from "@/components/ErrorBoundary/index.jsx";
+import { Toast } from "@/components/Toast/index.jsx";
 import { ToastsListWrapper } from "@/components/ToastList/styled";
 import { convertContainerPosition } from "@/utils/convertContainerPosition";
 

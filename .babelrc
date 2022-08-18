@@ -7,19 +7,18 @@
                     "node": "12"
                 }
             }
-        ]
+        ],
+        ["@babel/preset-react"]
     ],
     "plugins": [
         [
             "module-resolver",
             {
-                "root": ["./src"],
                 "alias": {
-                    "@/components": "/components",
-                    "@/hooks": "/hooks",
-                    "@/assets": "/assets"
+                    "@": "./src"
                 }
             }
-        ]
+        ],
+        ["file-loader"]
     ]
 }

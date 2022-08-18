@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import ReactDOM from "react-dom";
 
-import { ToastList } from "@/components/ToastList";
+import { ToastList } from "@/components/ToastList/index.jsx";
 import { ID } from "@/constants/id";
 import { useCreatePortal } from "@/hooks/useCreatePortal";
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import * as close from "@/assets/close.png";
 import * as closeWhite from "@/assets/close-white.png";
-import { Icon } from "@/components/Icon";
+import { Icon } from "@/components/Icon/index.jsx";
 import {
     CloseButton,
     Content,

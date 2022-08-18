@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 
-import { ToastContainer } from "@/containers/ToastContainer";
+import { ToastContainer } from "@/containers/ToastContainer/index.jsx";
 import { ToastConfigurator } from "@/services/ToastConfigurator";
 
 export const ToastService = new ToastConfigurator();

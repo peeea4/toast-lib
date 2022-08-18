@@ -1,4 +1,4 @@
-import { ToastService } from "@/components/ToastProvider";
+import { ToastService } from "../components/ToastProvider/index.jsx";
 
 export const useToast = () => {
     const configurable = (options) => {
