@@ -29,12 +29,12 @@ export const Toast = ({
     position,
 }) => {
     const [isStart, setIsStart] = useState(true);
+    const [xTouch, setXTouch] = useState(0);
     const removeToastHandler = (id) => () => {
         handleRemove(id);
     };
-    let xTouch = 0;
     const handleTouchStart = (e) => {
-        xTouch = e.touches[0].clientX;
+        setXTouch(e.touches[0].clientX);
     };
 
     const handleTouchMove = (e) => {

@@ -4,6 +4,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import eslint from "@rollup/plugin-eslint";
 import resolve from "@rollup/plugin-node-resolve";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
+import url from "@rollup/plugin-url";
 import path from "path";
 import external from "rollup-plugin-peer-deps-external";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
@@ -48,5 +49,6 @@ export default {
             extensions: [".js", ".ts", ".jsx", ".tsx"],
         }),
         nodeResolve(),
+        url(),
     ],
 };
