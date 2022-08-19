@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import * as close from "@/assets/close.png";
 import * as closeWhite from "@/assets/close-white.png";
@@ -15,6 +15,7 @@ import {
     ProgressBar,
     ToastWrapper,
 } from "@/components/Toast/styled";
+import { useProgress } from "@/hooks/useProgress";
 
 export const Toast = ({
     id,
@@ -28,39 +29,16 @@ export const Toast = ({
     animation,
     position,
 }) => {
-    const [isStart, setIsStart] = useState(true);
-    const [xTouch, setXTouch] = useState(0);
     const removeToastHandler = (id) => () => {
         handleRemove(id);
     };
-    const handleTouchStart = (e) => {
-        setXTouch(e.touches[0].clientX);
-    };
 
-    const handleTouchMove = (e) => {
-        const xMove = e.touches[0].clientX;
-        const diffX = xTouch - xMove;
-        if (diffX < 0) {
-            setIsStart(false);
-            setTimeout(() => {
-                handleRemove(id);
-            }, 150);
-        }
-    };
-
-    useEffect(() => {
-        if (!duration) return;
-        const timerId = setTimeout(() => {
-            setIsStart(false);
-            setTimeout(() => {
-                handleRemove(id);
-            }, 150);
-        }, duration);
-        return () => {
-            clearTimeout(timerId);
-        };
-    }, []);
-
+    const { isStart, handleTouchMove, handleTouchStart } = useProgress({
+        duration,
+        handleRemove,
+        id,
+    });
+    
     return (
         <ToastWrapper
             type={type}

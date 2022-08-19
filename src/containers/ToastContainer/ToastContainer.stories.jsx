@@ -40,7 +40,7 @@ export default {
 const ToastList = ({ position, animation }) => {
     const showToastHandler = () => {
         const { success } = useToast();
-        success("Success");
+        success("Text");
     };
 
     return (
