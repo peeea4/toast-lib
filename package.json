@@ -1,6 +1,6 @@
 {
     "name": "@peeea4/toast-lib",
-    "version": "1.0.6",
+    "version": "1.0.5",
     "description": "react-toast-library by Nikita Gabetc",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
@@ -73,10 +73,11 @@
         "rollup-plugin-postcss": "^4.0.2",
         "rollup-plugin-scss": "^3.0.0",
         "rollup-plugin-terser": "^7.0.2",
-        "solid-js": "^1.4.8",
         "styled-components": "^5.3.5"
     },
     "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "styled-components": "^5.3.5"
     }
 }
