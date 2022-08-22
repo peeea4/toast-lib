@@ -18,6 +18,7 @@
                     "@": "./src"
                 }
             }
-        ]
+        ],
+        ["transform-class-properties"]
     ]
 }

@@ -12,12 +12,11 @@
         "plugin:cypress/recommended"
     ],
     "parserOptions": {
-        "parser": "@babel/eslint-parser",
         "requireConfigFile": false,
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": 2020,
         "sourceType": "module"
     },
     "plugins": ["react", "prettier", "simple-import-sort", "import", "cypress"],
