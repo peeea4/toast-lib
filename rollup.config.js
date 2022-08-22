@@ -8,6 +8,7 @@ import url from "@rollup/plugin-url";
 import path from "path";
 import external from "rollup-plugin-peer-deps-external";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
 
 const packageJson = require("./package.json");
@@ -50,5 +51,8 @@ export default {
         }),
         nodeResolve(),
         url(),
+        postcss({
+            extensions: [".css"],
+        }),
     ],
 };
