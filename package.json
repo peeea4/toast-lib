@@ -74,10 +74,5 @@
         "rollup-plugin-scss": "^3.0.0",
         "rollup-plugin-terser": "^7.0.2",
         "styled-components": "^5.3.5"
-    },
-    "peerDependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "styled-components": "^5.3.5"
     }
 }
