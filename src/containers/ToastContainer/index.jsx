@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import ReactDOM from "react-dom";
+import { createPortal } from "react-dom";
 
 import { ToastList } from "@/components/ToastList/index.jsx";
 import { ID } from "@/constants/id";
@@ -30,7 +30,7 @@ export const ToastContainer = forwardRef(({ position, animation }, ref) => {
 
     return (
         rootStatus &&
-        ReactDOM.createPortal(
+        createPortal(
             <ToastList
                 position={position}
                 animation={animation}

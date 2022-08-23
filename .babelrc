@@ -18,7 +18,6 @@
                     "@": "./src"
                 }
             }
-        ],
-        ["transform-class-property-arrow-functions"]
+        ]
     ]
 }
