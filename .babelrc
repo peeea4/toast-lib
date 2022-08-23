@@ -1,5 +1,6 @@
 {
     "presets": [
+        ["@babel/preset-react"],
         [
             "@babel/env",
             {
@@ -7,8 +8,7 @@
                     "node": "12"
                 }
             }
-        ],
-        ["@babel/preset-react"]
+        ]
     ],
     "plugins": [
         [
@@ -19,6 +19,6 @@
                 }
             }
         ],
-        ["transform-class-properties"]
+        ["transform-class-property-arrow-functions"]
     ]
 }

@@ -4,23 +4,23 @@ export class ToastConfigurator {
         this.toastRef = { onAddToast: () => {}, onRemoveToast: () => {} };
     }
 
-    init(ref) {
+    init = (ref) => {
         this.toastRef = ref;
-    }
+    };
 
-    addToast(args) {
+    addToast = (args) => {
         const toastId = Math.random().toString(36).substring(2, 9);
         const toast = { toastId, ...args };
         this.toasts.push(toast);
         this.toastRef.onAdd(toast);
-    }
+    };
 
-    removeToast(id) {
+    removeToast = (id) => {
         this.toasts = this.toasts.filter((toast) => toast.id !== id);
         this.toastRef.onRemove(id);
-    }
+    };
 
-    getToasts() {
+    getToasts = () => {
         return this.toasts;
-    }
+    };
 }
