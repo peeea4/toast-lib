@@ -2,6 +2,10 @@ export class ToastConfigurator {
     constructor() {
         this.toasts = [];
         this.toastRef = { onAddToast: () => {}, onRemoveToast: () => {} };
+        this.init = this.init.bind(this);
+        this.addToast = this.addToast.bind(this);
+        this.removeToast = this.removeToast.bind(this);
+        this.getToasts = this.getToasts.bind(this);
     }
 
     init = (ref) => {
